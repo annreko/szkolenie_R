@@ -1,0 +1,20 @@
+#######
+
+df <- data.frame(x = sample(1:100, 10), y = seq(1, 10))
+
+# Wykres w ggplot2
+ggplot(df, aes(x = x, y = y)) +
+  geom_point(color = "red", shape = 2, size = 3) +
+  labs(title = "tytul", x = "tytul osi x", y = "tytul osi y") +
+  theme_minimal()
+
+
+df <- data.frame(t = 1:100, z = sin((1:100) / 10))
+
+# Wykres w ggplot2
+ggplot(df, aes(x = t, y = z)) +
+  geom_line(color = "blue", linewidth = 1) +
+  labs(title = "Wykres funkcji sinus", x = "t", y = "sin(t/10)") +
+  theme_minimal() +
+  theme(legend.position = "bottom") +
+  guides(color = guide_legend(title = ""))
