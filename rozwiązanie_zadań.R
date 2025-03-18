@@ -167,7 +167,7 @@ plot(x, y, col = "red", pch = 2, main = "tytul", xlab = "tytul osi x", ylab = "t
 
 t = c(1:100)
 z = sin(t/10)
-
+s
 plot(t, z, type = "l", col = "blue", lwd = 2)
 legend("bottomleft", legend = "sin(t/10)")
 
@@ -176,7 +176,7 @@ legend("bottomleft", legend = "sin(t/10)")
 boxplot(count ~ spray, data = InsectSprays, col = "pink")
 
 ## Histogram
+rozklad = rnorm(1000)
 
-hist(rnorm(c(1:1000)), breaks = 150, col = "pink", border = "black", probability = T)
-lines(density(rnorm(c(1:1000))))
-      
+hist(rozklad, breaks = 10, col = "pink", border = "black", probability = T)
+lines(density(rozklad))
